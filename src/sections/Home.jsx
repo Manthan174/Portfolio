@@ -116,7 +116,10 @@ export default function Home() {
               <a href="#projects" className="px-6 py-3 rounded-full text-white bg-gradient-to-r from-[#1cd8d2] via-[#00bf8f] to-[#302b63]">
                 View My Work
               </a>
-              <a href="/Manthan_Resume.pdf" download className="px-6 py-3 rounded-full bg-white text-black">
+              <a href="/Portfolio/Manthan_Resume.pdf" download 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 rounded-full bg-white text-black">
                 My Resume
               </a>
             </motion.div>
