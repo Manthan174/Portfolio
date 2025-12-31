@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+body{
+    font-family: "Poppins", sans-serif ;
+}
+
+h1, h2{
+    font-family: "Roboto", sans-serif;
+}
+ 
+@layer utilities{
+    .gradient{
+        background: linear-gradient(-45deg, #302b63, #00bf8f, #1cd8d2 )
+    }
+}
+
+html,
+body,
+#root {
+  background-color: rgb(151, 146, 146)/10;
+}
