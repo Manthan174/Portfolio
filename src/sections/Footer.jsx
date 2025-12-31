@@ -74,7 +74,7 @@ export default function Footer() {
       </div>
 
       <p className="text-gray-300 italic max-w-xl">
-         "Success is when preparation meets opportunity."                     
+         "Small steps create massive impact"                     
       </p>
 
       <p className="text-xs text-gray-400">

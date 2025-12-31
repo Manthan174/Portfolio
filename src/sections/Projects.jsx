@@ -10,7 +10,7 @@ import {
 import img1 from "../assets/img1.JPG";
 import img2 from "../assets/img2.JPG";
 import img3 from "../assets/img3.JPG";
-
+  
 // Mobile images
 import photo1 from "../assets/photo1.JPG";
 import photo2 from "../assets/photo2.PNG";
@@ -156,7 +156,7 @@ export default function Projects() {
                              transition-all duration-300 hover:scale-105"
                   style={{ color: project.bgColor }}
                 >
-                  View Project
+                  View  
                 </a>
               </div>
             </div>

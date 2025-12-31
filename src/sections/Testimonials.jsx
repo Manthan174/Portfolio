@@ -7,30 +7,30 @@ import w2 from '../assets/w2.png'
   const testimonials = [
   {
     name: "Yash Sahu",
-    role: "Software Engineer at HCL Technologies",
+    // role: "Software Engineer at HCL Technologies",
     review:
-      "Gaurav is a visionary developer. His attention to detail and creativity blew us away. Our project was a massive success because of him.",
+      "Manthan is a visionary developer. His attention to detail and creativity blew us away. Our project was a massive success because of him.",
     image: m1,
   },
   {
     name: "Heather Forster",
-    role: "UI/UX Designer at PixelWorks",
+    // role: "UI/UX Designer at PixelWorks",
     review:
       "Working with Gaurav was an absolute pleasure. He brings design and code together like magic. Highly recommend him!",
     image: w1,
   },
   {
     name: "Amy Jacobsan",
-    role: "Tech Manager at CodeEmpire",
+    // role: "Tech Manager at CodeEmpire",
     review:
-      "From concept to execution, Gaurav handled everything flawlessly. His work ethic and innovation are unmatched.",
+      "From concept to execution, Manthan handled everything flawlessly. His work ethic and innovation are unmatched.",
     image: m2,
   },
   {
     name: "Carry Smith",
-    role: "CTO at Innovate Labs",
+    // role: "CTO at Innovate Labs",
     review:
-      "Gaurav transformed our outdated platform into something modern and powerful. His skills are world-class.",
+      "Manthan transformed our outdated platform into something modern and powerful. His skills are very high.",
     image: w2,
   },
 ];
