@@ -16,7 +16,7 @@ import photo1 from "../assets/photo1.JPG";
 import photo2 from "../assets/photo2.PNG";
 import photo3 from "../assets/photo3.png";
 
-/* ---------- Detect Mobile ---------- */
+
 const useIsMobile = (query = "(max-width: 739px)") => {
   const [isMobile, setIsMobile] = useState(
     typeof window !== "undefined" && window.matchMedia(query).matches
@@ -36,7 +36,7 @@ export default function Projects() {
   const isMobile = useIsMobile();
   const sectionRef = useRef(null);
 
-  /* ---------- Project Data ---------- */
+
   const projects = useMemo(
     () => [
       {
@@ -94,15 +94,15 @@ export default function Projects() {
         transition: "background-color 500ms ease",
       }}
     >
-      {/* Sticky container */}
+      
       <div className="sticky top-0 h-screen flex flex-col items-center">
 
-        {/* 🔹 MY WORK (TOP CENTER) */}
+        
         <h2 className="mt-4 mb-8 text-4xl font-semibold tracking-wide">
           My Work
         </h2>
 
-        {/* 🔹 CENTER CONTENT */}
+        
         <div className="relative flex-1 w-full flex items-center justify-center">
           {projects.map((project, idx) => (
             <div
@@ -112,7 +112,7 @@ export default function Projects() {
               }`}
               style={{ width: "70%", maxWidth: "1000px" }}
             >
-              {/* PROJECT TITLE */}
+             
               <AnimatePresence mode="wait">
                 {activeIndex === idx && (
                   <motion.h3
@@ -128,7 +128,7 @@ export default function Projects() {
                 )}
               </AnimatePresence>
 
-              {/* IMAGE */}
+              
               <div className="relative w-full h-[60vh] md:h-[65vh]
                               rounded-xl overflow-hidden shadow-2xl">
 
@@ -145,7 +145,7 @@ export default function Projects() {
                   loading="lazy"
                 />
 
-                {/* BUTTON */}
+                
                 <a
                   href={project.link}
                   target="_blank"

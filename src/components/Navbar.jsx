@@ -11,7 +11,7 @@ export default function Navbar() {
   const lastScrollY = useRef(0);
   const timerId = useRef(null);
 
-  // Observe home section
+ 
   useEffect(() => {
     const homeSection = document.querySelector("#home");
 
@@ -34,7 +34,7 @@ export default function Navbar() {
     return () => observer.disconnect();
   }, []);
 
-  // Scroll behavior
+ 
   useEffect(() => {
     const handleScroll = () => {
       if (forceVisible) {
@@ -75,13 +75,13 @@ export default function Navbar() {
           visible ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        {/* Logo */}
+        
         <div className="flex items-center space-x-2">
           <img src={Logo} alt="Logo" className="w-8 h-8" />
           <div className="text-2xl font-bold text-white">Manthan</div>
         </div>
 
-        {/* Menu Button */}
+        
         <div className="block lg:absolute lg:left-1/2 lg:-translate-x-1/2">
           <button
             onClick={() => setMenuOpen(true)}
@@ -92,7 +92,7 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* CTA */}
+        
         <div className="hidden lg:block">
           <a
             href="#contact"

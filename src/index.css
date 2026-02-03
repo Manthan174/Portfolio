@@ -19,3 +19,45 @@ body,
 #root {
   background-color: rgb(151, 146, 146)/10;
 }
+
+/* Make the selected flag button transparent */
+.react-tel-input .selected-flag {
+  background-color: transparent !important;
+}
+
+/* Ensure dropdown and countries stay dark */
+.custom-phone-dropdown {
+  background-color: black !important;
+  color: white !important;
+}
+
+/* Each country row */
+.custom-phone-dropdown .country {
+  background-color: transparent !important;
+  color: white !important;
+}
+
+/* Selected row highlight */
+.custom-phone-dropdown .country.highlight {
+  background-color: rgba(255,255,255,0.12) !important;
+}
+
+/* Search box always on top */
+.custom-phone-dropdown .search {
+  position: sticky !important;
+  top: 0;
+  background-color: black !important;
+  z-index: 10;
+}
+
+/* Scrollbar */
+.custom-phone-dropdown::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-phone-dropdown::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-phone-dropdown::-webkit-scrollbar-thumb {
+  background-color: #6b7280; /* gray */
+  border-radius: 10px;
+}

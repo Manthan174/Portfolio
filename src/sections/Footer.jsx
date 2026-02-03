@@ -1,5 +1,6 @@
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { motion } from "framer-motion";
+import { FaHeart } from "react-icons/fa";
 
 
 const socials = [
@@ -12,7 +13,7 @@ const glowVariants = {
   initial: {
     scale: 1,
     y: 0,
-    filter: "drop-shadow(0 0 0 rgba(0, 0, 0, 0))", // FIXED: fitler -> filter
+    filter: "drop-shadow(0 0 0 rgba(0, 0, 0, 0))", 
   },
   hover: {
     scale: 1.2,
@@ -79,6 +80,12 @@ export default function Footer() {
 
       <p className="text-xs text-gray-400">
         &copy; {new Date().getFullYear()} Manthan Suhagiya. All rights reserved
+      </p>
+
+       <p className="flex items-center justify-center gap-1">
+        Designed With
+        <FaHeart className="text-red-600 animate-pulse" />
+        By <span className="text-yellow-500 font-medium ">Manthan Suhagiya</span>
       </p>
      </motion.div>
     </footer>

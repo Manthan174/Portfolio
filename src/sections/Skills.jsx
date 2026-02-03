@@ -1,13 +1,10 @@
 import { FaJava, FaReact, FaBootstrap } from "react-icons/fa";
 import {
-  SiNextdotjs,
   SiTypescript,
   SiTailwindcss,
   SiFastapi,
   SiPython,
-  SiDocker,
   SiMongodb,
-  SiAngular,
 } from "react-icons/si";
 import { DiNodejsSmall } from "react-icons/di";
 import { FaHtml5 } from "react-icons/fa6";
@@ -24,15 +21,13 @@ export default function Skills() {
     { icon: <IoLogoJavascript />, name: "JavScript" },
     { icon: <FaBootstrap />, name: "Bootstrap" },
     { icon: <FaReact />, name: "React" },
-    // { icon: <SiNextdotjs />, name: "Next.js" },
     { icon: <SiTypescript />, name: "TypeScript" },
     { icon: <SiTailwindcss />, name: "Tailwind CSS" },
     { icon: <SiFastapi />, name: "FastAPI" },
     { icon: <SiPython />, name: "Python" },
-    // { icon: <SiDocker />, name: "Docker" },
     { icon: <DiNodejsSmall />, name: "Node.js" },
     { icon: <SiMongodb />, name: "MongoDB" },
-    // { icon: <SiAngular />, name: "Angular" },
+
   ];
 
   const repeated = [...skills, ...skills];
@@ -46,7 +41,7 @@ export default function Skills() {
 
   const x = useMotionValue(0);
 
-  /* ---------------- Intersection Observer ---------------- */
+
   useEffect(() => {
     const el = sectionRef.current;
     if (!el) return;
@@ -62,7 +57,6 @@ export default function Skills() {
     return () => io.disconnect();
   }, []);
 
-  /* ---------------- Scroll + Touch Direction ---------------- */
   useEffect(() => {
     if (!active) return;
 
@@ -92,7 +86,7 @@ export default function Skills() {
     };
   }, [active]);
 
-  /* ---------------- Marquee Animation ---------------- */
+
   useEffect(() => {
     if (!active) return;
 
@@ -151,7 +145,7 @@ useEffect(() => {
       ref={sectionRef}
       className="relative w-full pb-16 flex flex-col items-center justify-center bg-black text-white overflow-hidden"
     >
-      {/* -------- GLOW BACKGROUND -------- */}
+  
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 left-1/2 w-[320px] h-[320px]
           rounded-full bg-gradient-to-r from-[#302b63] via-[#00df8f] to-[#1cd8d2]
@@ -162,7 +156,7 @@ useEffect(() => {
           opacity-25 blur-[140px] animate-pulse delay-700" />
       </div>
 
-      {/* -------- TITLE -------- */}
+      
       <motion.h2
         className="text-4xl mt-6 sm:text-5xl font-bold bg-clip-text text-transparent
         bg-gradient-to-r from-[#1cd8d2] via-[#00df8f] to-[#302b63] z-10"
@@ -181,7 +175,7 @@ useEffect(() => {
         Modern Application | Modern Technology
       </motion.p>
 
-      {/* -------- MARQUEE -------- */}
+      
       <div className="relative w-full overflow-hidden z-10">
         <motion.div
           ref={trackRef}

@@ -20,7 +20,7 @@ export default function About() {
       id="about"
       className="min-h-screen w-full flex items-center justify-center relative bg-black text-white overflow-hidden"
     >
-      {/* Glow background */}
+      
       <div className="absolute inset-0 pointer-events-none">
         {glows.map((c, i) => (
           <div
@@ -30,18 +30,17 @@ export default function About() {
         ))}
       </div>
 
-      {/* Content */}
+     
       <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12 flex flex-col gap-16">
 
-        {/* Profile + Intro */}
         <motion.div
-          className="flex flex-col md:flex-row items-center md:items-stretch gap-12"
+          className="flex flex-col md:flex-row items-center mt-5 md:items-stretch gap-12"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true, amount: 0.4 }}
         >
-          {/* Image */}
+         
           <motion.div
             className="relative w-[160px] h-[160px] md:w-[200px] md:h-[200px] rounded-2xl overflow-hidden shadow-2xl
             bg-gradient-to-r from-[#1cd8d2]/20 to-[#302b63]/20 border border-[#1cd8d2]/25"
@@ -51,11 +50,11 @@ export default function About() {
             <img
               src={My_photo}
               alt="profile"
-              className="absolute inset-0 w-full h-full object-cover"
+              className="absolute inset-0 w-full h-full object-cover "
             />
           </motion.div>
 
-          {/* Text */}
+          
           <div className="flex-1 flex flex-col justify-center text-center md:text-left">
             <h2
               className="text-4xl sm:text-5xl font-extrabold tracking-tight bg-clip-text text-transparent 
@@ -75,7 +74,6 @@ export default function About() {
               bringing ideas to life from concept to production.
             </p>
 
-            {/* Stats */}
             <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-xl">
               {stats.map((item, i) => (
                 <motion.div
@@ -92,7 +90,6 @@ export default function About() {
               ))}
             </div>
 
-            {/* Buttons */}
             <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <a
                 href="#projects"
@@ -111,7 +108,7 @@ export default function About() {
           </div>
         </motion.div>
 
-        {/* About text */}
+      
         <motion.div
           className="text-center md:text-left max-w-4xl"
           initial={{ opacity: 0, x: -30 }}
@@ -119,7 +116,7 @@ export default function About() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true, amount: 0.4 }}
         >
-          <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3">
+          <h3 className="text-2xl sm:text-3xl font-bold text-white">
             About Me
           </h3>
 
@@ -129,7 +126,7 @@ export default function About() {
             coding insights on Instagram and YouTube.
           </p>
 
-          <p className="mt-4 text-gray-400 text-base sm:text-lg " >
+          <p className="mt-4 text-gray-400 text-base sm:text-lg mb-8" >
             I love turning ideas into scalable, user-friendly products that make
             a real impact.
           </p>

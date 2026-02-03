@@ -3,6 +3,10 @@ import ParticlesBackground from "../components/ParticlesBackground";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import Astra from "../assets/Astra.png";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
+
+
 
 // ENV VARIABLES
 const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
@@ -14,6 +18,7 @@ export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    number: "",
     service: "",
     budget: "",
     idea: "",
@@ -29,7 +34,7 @@ export default function Contact() {
   };
 
   const validateForm = () => {
-    const required = ["name", "email", "service", "idea"];
+    const required = ["name", "email", "service", "number", "idea"];
     const newErrors = {};
     required.forEach((f) => !formData[f].trim() && (newErrors[f] = "Fill this field"));
     if (formData.service !== "other" && !formData.budget.trim()) newErrors.budget = "Fill this field";
@@ -43,7 +48,7 @@ export default function Contact() {
     setStatus("sending");
 
     try {
-      // Send email to admin
+      
       await emailjs.send(
         SERVICE_ID,
         TEMPLATE_ID,
@@ -55,7 +60,7 @@ export default function Contact() {
         PUBLIC_KEY
       );
 
-      // Auto-reply to user
+    
       await emailjs.send(
         SERVICE_ID,
         AUTO_REPLY_ID,
@@ -82,7 +87,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="w-full min-h-screen relative bg-black overflow-hidden text-white py-20 px-6 md:px-20 flex flex-col md:flex-row items-center gap-10">
+    <section id="contact"className="w-full min-h-screen relative bg-black overflow-hidden text-white py-20 px-6 md:px-20 flex flex-col md:flex-row items-center gap-10">
       {/* Particles Background */}
       <ParticlesBackground />
 
@@ -149,6 +154,33 @@ export default function Contact() {
               {errors.email && <p className="text-red-500 text-xs">{errors.email}</p>}
             </div>
 
+           <div className="flex flex-col">
+  <label className="mb-1">
+    Your Number <span className="text-red-500">*</span>
+  </label>
+
+ <PhoneInput
+  country={"in"}
+  enableSearch
+  value={formData.number}
+  onChange={(value) => setFormData(prev => ({ ...prev, number: value }))}
+  inputProps={{ name: "number", required: true }}
+  containerClass="w-full"
+  inputClass={`!w-full !bg-white/10 !text-white !border ${
+    errors.number ? "!border-red-500" : "!border-gray-500"
+  } !rounded-md !py-3 !pl-12 focus:!border-blue-500`}
+  buttonClass="!bg-transparent !border-none"
+  dropdownClass="custom-phone-dropdown !text-white"
+/>
+
+
+
+  {errors.number && (
+    <p className="text-red-500 text-xs mt-1">{errors.number}</p>
+  )}
+</div>                          
+
+
             {/* Service */}
             <div className="flex flex-col">
               <label className="mb-1">
@@ -163,13 +195,19 @@ export default function Contact() {
                 } text-white focus:outline-none focus:border-blue-500`}
               >
                 <option value="" disabled>
-                  Something in mind?
+                  Select a service
                 </option>
                 <option value="Web Development" className="text-black">
                   Web Development
                 </option>
-                <option value="Build Your Portfolio" className="text-black">
-                  Build Your Portfolio
+                <option value="WEb Application" className="text-black">
+                  Web Application
+                </option>
+                <option value="Frontend Website" className="text-black">
+                  Frontend WebSite 
+                </option>
+                <option value="course" className="text-black">
+                  Full Stack Course
                 </option>
                 <option value="other" className="text-black">
                   Others
